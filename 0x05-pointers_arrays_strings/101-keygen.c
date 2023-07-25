@@ -6,11 +6,15 @@
 
 void generate_password(int leng)
 {
-	char possibleChars[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
+	int i;
+	char possibleChars[] = "abcdefghijklmnopqrstuvwxyz"
+			"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+			"0123456789"
+			"!@#$%^&*()";
 	char password[leng + 1];
 
 	srand(time(0)); /* seed for random number generation */
-	for (int i = 0; i < leng; i++)
+	for (i = 0; i < leng; i++)
 	{
 		int randomIndex = rand() % (sizeof(possibleChars) - 1);
 		password[i] = possibleChars[randomIndex];
