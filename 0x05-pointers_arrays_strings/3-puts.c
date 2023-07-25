@@ -1,15 +1,17 @@
 #include "main.h"
 
 /**
- * void _puts - function that prints a string, in reverse.
- * @s: string to print.
- * Return: void.
+ * _puts - Prints a string
+ * @str: The string to print
+ * Return: void
  */
-void _puts(char *s)
+
+void _puts(char *str)
+
 {
-	while (*s != '\0')
+	for (; *str != '\0'; str++)
 	{
-	_putchar(*s++);
+	puts(*str);
 	}
 	_putchar('\n');
 }
