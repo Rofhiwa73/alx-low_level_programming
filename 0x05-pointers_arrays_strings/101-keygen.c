@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#define MAX_PASSWORD_LENGTH 100
 
 /* generate_password - fumction to generate a random password. */
 
@@ -11,7 +12,7 @@ void generate_password(int leng)
 			"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 			"0123456789"
 			"!@#$%^&*()";
-	char password[leng + 1];
+	char password[MAX_PASSWORD_LENGTH];
 
 	srand(time(0)); /* seed for random number generation */
 	for (i = 0; i < leng; i++)
