@@ -27,7 +27,7 @@ void generate_password(int leng)
 
 int main()
 {
-	int leng = 10;
+	int leng = 15;
 	generate_password(leng);
 	return 0;
 }
