@@ -7,7 +7,7 @@
 void generate_password(int leng)
 {
 	char possibleChars[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
-	char password[leng+1];
+	char password[leng + 1];
 
 	srand(time(0)); /* seed for random number generation */
 	for (int i = 0; i < leng; i++)
@@ -22,7 +22,7 @@ void generate_password(int leng)
 
 int main()
 {
-	int leng = 10; /* desired length of password */
+	int leng = 10;
 	generate_password(leng);
 	return 0;
 }
