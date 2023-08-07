@@ -1,12 +1,12 @@
 #include "main.h"
 
-int sqrt_helper(int number, int root);
+int helper_sqrt_recursion(int num, int root);
 
 /**
  * _sqrt_recursion - Calculates the natural square root of a number.
  * @n: The number.
  *
- * Return: The natural square root of the n, or -1 if not found.
+ * Return: The natural square root of n, or -1 if not found.
  */
 int _sqrt_recursion(int n)
 {
@@ -16,29 +16,30 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		return (sqrt_helper(n, 0));
+		return (helper_sqrt_recursion(n, 0));
 	}
 }
+
 /**
- * sqrt_helper - Helper function to calculate the natural square root.
- * @number: The number.
- * @number1: The current number for the square root.
+ * helper_sqrt_recursion - Helper function to calculate the
+ * natural square root.
+ * @num: The number.
+ * @root: The current number for the square root.
  *
  * Return: The natural square root of n, or -1 if not found.
  */
-
-int sqrt_helper(int number, int root)
+int helper_sqrt_recursion(int num, int root)
 {
-	if (root * root == 0)
+	if ((root * root) == num)
 	{
 		return (root); /* Finds the natural square root number */
 	}
-	else if (root * root > number)
+	else if ((root * root) > num)
 	{
-		return (-1); /* Not a perfect square, so no natural square root.*/
+		return (-1); /* Not a perfect square, so no natural square root. */
 	}
 	else
 	{
-		return (sqrt_helper(number, root + 1)); /* recursive search */
+		return (helper_sqrt_recursion(num, root + 1)); /* recursive search */
 	}
 }
