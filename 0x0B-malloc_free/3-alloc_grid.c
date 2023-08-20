@@ -31,6 +31,7 @@ int **alloc_grid(int width, int height)
 		grid[i] = malloc(sizeof(int) * width);
 		if (grid[i] == NULL)
 		{
+			int j;
 			/*Fre previously allocated memory on failure*/
 			for (j = 0; j < 1; j++)
 			{
