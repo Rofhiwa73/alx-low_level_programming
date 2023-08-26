@@ -11,7 +11,7 @@
  * @next: Points to the next node.
  * @s: A pointer to a string in linked list.
  *
- * Description: Singly linked list nide structure.
+ * Description: Singly linked list node structure.
  */
 typedef struct list_s
 {
