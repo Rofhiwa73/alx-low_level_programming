@@ -1,12 +1,16 @@
 #include <stdio.h>
+#include <libgen.h>
 
 /**
- * main- Entry point.
+ * main - Entry point.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	printf("Compiled from file: %s\n", __FILE__);
+	const char *path = __FILE__;
+	const char *filename = basename((char *)path);
+
+	printf("%s\n", filename);
 	return (0);
 }
